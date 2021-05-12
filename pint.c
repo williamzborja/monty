@@ -8,12 +8,12 @@
 void _pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *tmp;
-	int i = 0;
 
+	(void) line_number;
 	tmp = (*head);
 	if (tmp == NULL)
 	{
-		perror_exit;
+		perror_exit(line_number, 3, NULL, head);
 		return;
 	}
 	while (tmp->next == NULL)
@@ -21,5 +21,5 @@ void _pint(stack_t **head, unsigned int line_number)
 		/*here you will reach the final node*/
 		tmp = tmp->next;
 	}
-	printf("%d", tmp->n)
+	printf("%d", tmp->n);
 }

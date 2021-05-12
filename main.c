@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 		char_read = getline(&line_read, &buffer_size, file);
 		if (char_read == -1)
 		{
+			fclose(file);
 			perror_exit(num_line, 99, line_read, &head);
 		}
 		if (line_read[char_read - 1] == '\n')
@@ -35,5 +36,6 @@ int main(int argc, char *argv[])
 		}
 		execute(&head, line_read, num_line);/* execute */
 	}
+	fclose(file);
 	return (EXIT_SUCCESS);
 }

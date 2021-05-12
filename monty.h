@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define DELIM " "
+
 /* STRUCTURES */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -18,8 +20,6 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
-
-#define DELIM " "
 typedef struct stack_s
 {
 	int n;
@@ -44,7 +44,13 @@ typedef struct instruction_s
 /* MAIN FUNCTIONS */
 /*print error msg in standard error*/
 void perror_exit(int, int, char *, stack_t **);
-/*find if the built-in sended exists or not*/
+/**
+* find_built - find if the built-in sended exists or not
+* @num_line: file line counter
+* @opcode: built-in function
+* @line_number: file line counter
+* Return: always void
+**/
 void (*find_built(int num_line, char *opcode, stack_t **head))(stack_t **stack,
 							       unsigned int line_number);
 /**/

@@ -34,13 +34,9 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 
 	/* 0 USAGE: monty file\n */
 	if (err_code == 0)
-	{
 		fprintf(stderr, "USAGE: monty file\n");
-	}
 	else if (err_code == 1)
-	{
 		fprintf(stderr, "Error: Can't open file %s\n", std_string);
-	}
 	else if (err_code == 2)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s", line_num,
@@ -52,13 +48,9 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 			std_string);
 	}
 	else if (err_code == 5)
-	{
 		fprintf(stderr, "L%d: Error: malloc failed", line_num);
-	}
 	else if (err_code == 4)
-	{
 		fprintf(stderr, "L%d: L<line_number>: can't add, stack too short", line_num);
-	}
 	else if (err_code == 6)
 	{
 		fprintf(stderr, "L%d: usage: push integer", line_num);
@@ -66,7 +58,6 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 
 	/* frees */
 	free_stack(*head);
-	free(head);
 	head = NULL;
 
 	if (err_code == 99)
