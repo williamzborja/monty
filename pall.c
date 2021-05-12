@@ -5,7 +5,7 @@
 * @line_number: file line counter
 * Return: always void
 **/
-void _pall(stack_t **head, unsigned int line_number )
+void _pall(stack_t **head, unsigned int line_number)
 {
 	size_t i = 0;
 	stack_t *tmp;

@@ -13,7 +13,7 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 
 	if (!head)
 	{
-		perror_exit(line_number, 3 , "push", head);
+		perror_exit(line_number, 3, "push", head);
 		return;
 	}
 

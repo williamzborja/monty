@@ -44,15 +44,18 @@ typedef struct instruction_s
 /* MAIN FUNCTIONS */
 /*print error msg in standard error*/
 void perror_exit(int, int, char *, stack_t **);
-
-void (*find_built(int num_line, char *opcode, stack_t **head))(stack_t **stack, unsigned int line_number);
-
+/*find if the built-in sended exists or not*/
+void (*find_built(int num_line, char *opcode, stack_t **head))(stack_t **stack,
+							       unsigned int line_number);
+/**/
 FILE *validate_path(int argc, char *argv[], FILE *file);
-
+/**/
 int tokenize(char *, char **);
-
+/**/
 void execute(stack_t **, char *, size_t);
+/**/
 void free_stack(stack_t *head);
+
 /* BUILT-IN FUNCTIONS */
 /*prints all the elements of a stack_t list*/
 void _pall(stack_t **, unsigned int);
@@ -65,8 +68,6 @@ void _swap(stack_t **head, unsigned int line_number);
 /*prints the value at the top of the stack, followed by a new line*/
 void _pint(stack_t **head, unsigned int line_number);
 
-
-void test();
 /*validate if two strings are equals*/
 int _strcmp(char *str1, char *str2);
 /*counts the number of elements in a linked stack_t list*/

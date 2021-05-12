@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  *  _strcmp - validate if two strings are equals.
  *  @str1: text one.
@@ -23,11 +22,17 @@ int _strcmp(char *str1, char *str2)
 	/* recursion case */
 	return (_strcmp(str1 + 1, str2 + 1));
 }
-
+/**
+ * tokenize - cut into diferent strings
+ * @opcode: line sended
+ * @tokens: the diferent strings
+ * Return: 0 on success
+ **/
 int tokenize(char *opcode, char **tokens)
 {
 	size_t i;
 	char *token;
+
 	for (i = 0; 1; i++)
 	{
 		token = strtok(((i == 0) ? opcode : NULL), DELIM);
@@ -40,7 +45,7 @@ int tokenize(char *opcode, char **tokens)
 	return (1);
 }
 /**
- * dlistint_len - counts the number of elements in a linked stack_t list
+ * len_list - counts the number of elements in a linked stack_t list
  * @h: head in the dobly linked list
  * Return: the number of elements in a linked stack_t list
  **/

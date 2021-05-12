@@ -12,7 +12,7 @@ void execute(stack_t **head, char *instruction, size_t num_line)
 	if (!instruction)
 		perror_exit(num_line, 2, instruction, head); /*print error*/
 	/* tokenize */
-    tokenize(instruction, tokens);
+	tokenize(instruction, tokens);
 	if (!strcmp(tokens[0], "push")) /* find push*/
 	{
 		_push(head, num_line, tokens[1]);
