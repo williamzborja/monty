@@ -100,7 +100,6 @@ FILE *validate_path(int argc, char *argv[], FILE *file)
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
-		/*Error: Can't open file <file>*/
 		free_exit(1, 0, argv[1]);
 	}
 	return (file);

@@ -22,23 +22,17 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 		free_exit(6, line_number, "push");
 		return;
 	}
-
-
 	if (token_num[0] == '0')
-	{
 		num = 0;
-	}
 	else
 	{
 		num = atoi(token_num);
 		if (num == 0)
 			free_exit(6, line_number, "push");
 	}
-
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		/* error "Error: malloc failed"; */
 		free_exit(5, line_number, NULL);
 		return;
 	}

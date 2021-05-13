@@ -12,10 +12,10 @@ void (*find_built(int num_line, char *opcode))(stack_t **head,
 
 	instruction_t options[] = {
 		{"pall", _pall},
-		/* {"pint", _pint}, */
+		{"pint", _pint},
 		{"pop", _pop},
-		/* {"swap", _swap}, */
-		/* {"add", _add}, */
+		{"swap", _swap},
+		{"add", _add},
 		/* {"nop", _nop}, */
 		{NULL, NULL}};
 

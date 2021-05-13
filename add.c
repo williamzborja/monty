@@ -5,7 +5,7 @@
 * @line_num: file line counter
 * Return: always void
 **/
-void add(stack_t **head, unsigned int line_num)
+void _add(stack_t **head, unsigned int line_num)
 {
 	int num_elements = 0;
 	stack_t *tmp;
@@ -18,7 +18,7 @@ void add(stack_t **head, unsigned int line_num)
 	num_elements = len_list(*head);
 	if (num_elements < 2)
 	{
-		free_exit(5, line_num, "add");
+		free_exit(4, line_num, "add");
 		return;
 	}
 	tmp = (*head);

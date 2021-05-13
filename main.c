@@ -50,8 +50,7 @@ int main(int argc, char *argv[])
  * free_exit - handle free and exit
  * @line_num: counter from the file readed
  * @err_code: code for find an especific error
- * @std_string: string for manage an especific error
- * @head: head in the double linked list
+ * @opcode: string for manage an especific error
  * Return: always void
  **/
 void free_exit(int err_code, int line_num, char *opcode)
@@ -62,7 +61,7 @@ void free_exit(int err_code, int line_num, char *opcode)
 	free_data->head = NULL;
 
 	free(free_data->line_read);
-    fclose(free_data->file);
+	fclose(free_data->file);
 	free(free_data);
 	if (err_code == 99)
 		exit(EXIT_SUCCESS);

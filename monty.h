@@ -84,6 +84,8 @@ void _pop(stack_t **, unsigned int);
 void _swap(stack_t **head, unsigned int line_number);
 /*prints the value at the top of the stack, followed by a new line*/
 void _pint(stack_t **head, unsigned int line_number);
+/*sum the first two elements in one of them*/
+void _add(stack_t **head, unsigned int line_num);
 
 /* TOOLS */
 /**/
