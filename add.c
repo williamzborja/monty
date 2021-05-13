@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
-* add - adds the top two elements of the stack
+* _add - adds the top two elements of the stack
 * @head: head in the dobly linked list
 * @line_num: file line counter
 * Return: always void

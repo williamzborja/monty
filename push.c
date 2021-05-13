@@ -2,12 +2,17 @@
 
 #include <ctype.h>
 
+/**
+ * digits_only - validate if string is only numbers
+ * @s: string
+ * Return: true or false
+ */
 int digits_only(const char *s)
 {
 	while (*s)
 		if (isdigit(*s++) == 0)
-			return 0;
-	return 1;
+			return (0);
+	return (1);
 }
 
 /**

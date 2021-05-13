@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * print_err - print all error message of built-ins functions
+ * @line_num: number of line from file
+ * @err_code: code of error
+ * @std_string: message of error
+ */
 void print_err(int line_num, int err_code, char *std_string)
 {
 	if (err_code == 0)

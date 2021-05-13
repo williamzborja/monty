@@ -2,7 +2,7 @@
 /**
 * find_built - find if the built-in sended exists or not
 * @num_line: file line counter
-* @opcode: built-in function
+* @line_number: file line counter
 * Return: always void
 **/
 void (*find_built(int num_line, char *opcode))(stack_t **head,
