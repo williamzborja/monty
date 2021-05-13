@@ -61,7 +61,7 @@ int tokenize(char *, char **);
 void execute(stack_t **, char *, size_t);
 /**/
 void free_stack(stack_t *head);
-
+int only_space(char *string);
 /* BUILT-IN FUNCTIONS */
 /*prints all the elements of a stack_t list*/
 void _pall(stack_t **, unsigned int);

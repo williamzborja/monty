@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	/* initialize stack */
 
 	/* read file*/
-	for (num_line = 0; char_read != EOF; num_line++)
+	for (num_line = 1; char_read != EOF; num_line++)
 	{
 		/*recordar liberar el malloc de getline*/
 		char_read = getline(&line_read, &buffer_size, file);
@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
 			/*para eliminar el caracter '/n'*/
 			line_read[char_read - 1] = '\0';
 		}
+		if (only_space(line_read))
+			continue;
 		execute(&head, line_read, num_line);/* execute */
 	}
 	fclose(file);

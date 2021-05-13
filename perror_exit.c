@@ -43,25 +43,24 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 		fprintf(stderr, "Error: Can't open file %s\n", std_string);
 	else if (err_code == 2)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s", line_num,
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_num,
 			std_string);
 	}
 	else if (err_code == 3)
 	{
-		fprintf(stderr, "L%d: can't %s an empty stack", line_num,
+		fprintf(stderr, "L%d: can't %s an empty stack\n", line_num,
 			std_string);
 	}
 	else if (err_code == 5)
-		fprintf(stderr, "L%d: Error: malloc failed", line_num);
+		fprintf(stderr, "L%d: Error: malloc failed\n", line_num);
 	else if (err_code == 4)
-		fprintf(stderr, "L%d: L<line_number>: can't add, stack too short", line_num);
+		fprintf(stderr, "L%d: L<line_number>: can't add, stack too short\n", line_num);
 	else if (err_code == 6)
 	{
-		fprintf(stderr, "L%d: usage: push integer", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 	}
 
-	/* frees */
-  if ((*head)!= NULL)
+  if ((*head)!= NULL) /* frees */
   {
     free_stack((*head));
   }

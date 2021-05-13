@@ -62,3 +62,25 @@ size_t len_list(const stack_t *h)
 	}
 	return (i);
 }
+/**
+ * only_space - validate is string have only space
+ * @string: char * to validate
+ * Return: 0 o 1 is only spaces
+ */
+int only_space(char *string)
+{
+	size_t i;
+
+	if (!string)
+		return (0);
+
+	if (string[0] == '\0')
+		return (1);
+
+	for (i = 0; string[i] ; i++)
+	{
+		if (string[i] != ' ')
+			return (0);
+	}
+	return (1);
+}

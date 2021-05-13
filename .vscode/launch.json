@@ -10,6 +10,7 @@
 			"request": "launch",
 			"program": "${fileDirname}/monty",
 			"args": [
+				"bytecodes/001.m"
 			],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
