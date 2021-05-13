@@ -27,8 +27,8 @@ void print_err(int line_num, int err_code, char *std_string)
 	else if (err_code == 4)
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_num);
 	else if (err_code == 6)
-	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
-	}
+	else if (err_code == 7)
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_num);
 }
 
