@@ -34,7 +34,11 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 
 	/* 0 USAGE: monty file\n */
 	if (err_code == 0)
-		fprintf(stderr, "USAGE: monty file\n");
+  {
+    fprintf(stderr, "USAGE: monty file\n");
+    exit(EXIT_FAILURE);
+  }
+
 	else if (err_code == 1)
 		fprintf(stderr, "Error: Can't open file %s\n", std_string);
 	else if (err_code == 2)
@@ -57,7 +61,11 @@ void perror_exit(int line_num, int err_code, char *std_string, stack_t **head)
 	}
 
 	/* frees */
-	free_stack(*head);
+  if ((*head)!= NULL)
+  {
+    free_stack((*head));
+  }
+
 	head = NULL;
 
 	if (err_code == 99)
