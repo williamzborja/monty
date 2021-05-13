@@ -16,7 +16,7 @@ void (*find_built(int num_line, char *opcode))(stack_t **head,
 		{"pop", _pop},
 		{"swap", _swap},
 		{"add", _add},
-		/* {"nop", _nop}, */
+		// {"nop", _nop},
 		{NULL, NULL}};
 
 	for (i = 0; options[i].opcode != NULL; i++)

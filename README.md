@@ -1,4 +1,4 @@
-# monty
+# Monty
 
 <img src="./img/monty_burns_cup.png" width='400'>
 

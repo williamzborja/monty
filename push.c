@@ -32,7 +32,6 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 		free_exit(3, line_number, "push");
 		return;
 	}
-
 	if (!token_num)
 	{
 		free_exit(6, line_number, "push");
