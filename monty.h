@@ -54,8 +54,8 @@ typedef struct free_s
 	stack_t *head;
 } free_t;
 
-/* MAIN FUNCTIONS */
 
+/* MAIN FUNCTIONS */
 /*print error msg in standard error*/
 void print_err(int err_code, int line_number, char *opcode);
 void free_exit(int, int, char *);
@@ -68,33 +68,43 @@ void free_exit(int, int, char *);
 void (*find_built(int num_line, char *opcode))(stack_t **stack,
 															   unsigned int line_number);
 
-/**/
+/*find respective function and execute.*/
 void execute(stack_t **, char *, size_t);
-/**/
+/*free all double linked list*/
 void free_stack(stack_t *head);
+
 
 /* BUILT-IN FUNCTIONS */
 /*prints all the elements of a stack_t list*/
 void _pall(stack_t **, unsigned int);
 /*adds a new node at the beginning of a dlistint_t list*/
 void _push(stack_t **head, unsigned int num_line, char *token_num);
+/*prints the value at the top of the stack, followed by a new line*/
+void _pint(stack_t **head, unsigned int line_number);
 /* Delete node in double linked list*/
 void _pop(stack_t **, unsigned int);
 /*swaps the top two elements of the stack*/
 void _swap(stack_t **head, unsigned int line_number);
-/*prints the value at the top of the stack, followed by a new line*/
-void _pint(stack_t **head, unsigned int line_number);
 /*sum the first two elements in one of them*/
 void _add(stack_t **head, unsigned int line_num);
+/*doesn't do anything*/
+void _nop(stack_t **head, unsigned int line_number);
+/*sub the first two elements in one of them*/
+void _sub(stack_t **head, unsigned int line_num);
+/*div the first two elements in one of them*/
+void _div(stack_t **head, unsigned int line_num);
+/*mul the first two elements in one of them**/
+void _mul(stack_t **head, unsigned int line_num);
+
 
 /* TOOLS */
 /**/
 FILE *validate_path(int argc, char *argv[], FILE *file);
 /*validate if two strings are equals*/
 int _strcmp(char *str1, char *str2);
-/**/
+/*cut into diferent strings the first two args from a line*/
 int tokenize(char *, char **);
-/**/
+/*validate is string have only space*/
 int only_space(char *string);
 /*counts the number of elements in a linked stack_t list*/
 size_t len_list(const stack_t *head);

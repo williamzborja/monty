@@ -23,7 +23,7 @@ int _strcmp(char *str1, char *str2)
 	return (_strcmp(str1 + 1, str2 + 1));
 }
 /**
- * tokenize - cut into diferent strings
+ * tokenize - cut into diferent strings the first two args from a line
  * @opcode: line sended
  * @tokens: the diferent strings
  * Return: 0 on success

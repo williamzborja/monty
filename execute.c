@@ -13,6 +13,10 @@ void execute(stack_t **head, char *instruction, size_t num_line)
 		free_exit(2, num_line, instruction); /*print error*/
 	/* tokenize */
 	tokenize(instruction, tokens);
+
+	if (!strcmp(tokens[0][0], "#")) /*find comments*/
+		return;
+
 	if (!strcmp(tokens[0], "push")) /* find push*/
 	{
 		_push(head, num_line, tokens[1]);

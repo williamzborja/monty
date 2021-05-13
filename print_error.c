@@ -36,5 +36,6 @@ void print_err(int line_num, int err_code, char *std_string)
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 	else if (err_code == 7)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_num);
+	else if (err_code == 8)
+		fprintf(stderr, "L%d: division by zero\n", line_num);
 }
-
