@@ -43,8 +43,8 @@ typedef struct instruction_s
 
 /**
  * struct free_s - handle variables for free
- * @line_num: counter from the file readed
- * @std_string: string for manage an especific error
+ * @line_read: line from file readed
+ * @file: file readed
  * @head: head in the double linked list
 **/
 typedef struct free_s
@@ -62,7 +62,6 @@ void free_exit(int, int, char *);
 /**
 * find_built - find if the built-in sended exists or not
 * @num_line: file line counter
-* @opcode: built-in function
 * @line_number: file line counter
 * Return: always void
 **/

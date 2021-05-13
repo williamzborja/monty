@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	/*declaration variables*/
 	size_t buffer_size = 0, num_line = 1;
 	ssize_t char_read = 0;
+
 	free_data = malloc(sizeof(free_t));
 	if (!free_data)
 		free_exit(5, 0, NULL);
@@ -43,7 +44,6 @@ int main(int argc, char *argv[])
 			continue;
 		execute(&(free_data->head), free_data->line_read, num_line);/* execute */
 	}
-	// fclose(file);
 	return (EXIT_SUCCESS);
 }
 /**
