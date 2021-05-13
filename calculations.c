@@ -86,11 +86,11 @@ void _div(stack_t **head, unsigned int line_num)
 		return;
 	}
 	tmp = (*head);
-    if ((*head)->n == '0')
-    {
-        free_exit(8, line_num, "div");
+	if ((*head)->n == '0')
+	{
+		free_exit(8, line_num, "div");
 		return;
-    }
+	}
 	/*here the values that are inside the first two nodes*/
 	/*are divided together in the second node*/
 	(*head)->next->n = (((*head)->n) / ((*head)->next->n));
