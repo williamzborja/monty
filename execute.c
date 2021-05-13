@@ -14,7 +14,7 @@ void execute(stack_t **head, char *instruction, size_t num_line)
 	/* tokenize */
 	tokenize(instruction, tokens);
 
-	if (!strcmp(tokens[0][0], "#")) /*find comments*/
+	if (tokens[0][0] ==  '#') /*find comments*/
 		return;
 
 	if (!strcmp(tokens[0], "push")) /* find push*/
