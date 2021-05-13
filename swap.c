@@ -12,14 +12,14 @@ void _swap(stack_t **head, unsigned int line_number)
 	if (head == NULL)
 	{
 		/* error: "the stack is empty";*/
-		perror_exit(line_number, 3, "swap", head);
+		free_exit(3, line_number, "swap");
 		return;
 	}
 	num_elements = len_list(*head);
 	if (num_elements < 2)
 	{
 		/* error: "L<line_number>: can't swap, stack too short"; */
-		perror_exit(line_number, 4, "swap", head);
+		free_exit(4, line_number, "swap");
 		return;
 	}
 	tmp_num = (*head)->n;

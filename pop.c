@@ -14,7 +14,7 @@ void _pop(stack_t **head, unsigned int line_num)
 
 	if (head == NULL || *head == NULL)
 	{
-		perror_exit(line_num, 3, "pop", head);
+		free_exit(3, line_num, "pop");
 		return;
 	}
 	for (i = 0; tmp->next; i++)

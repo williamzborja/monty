@@ -12,13 +12,13 @@ void add(stack_t **head, unsigned int line_num)
 
 	if (head == NULL)
 	{
-		perror_exit(line_num, 5, "add", head);
+		free_exit(5, line_num, "add");
 		return;
 	}
 	num_elements = len_list(*head);
 	if (num_elements < 2)
 	{
-		perror_exit(line_num, 5, "add", head);
+		free_exit(5, line_num, "add");
 		return;
 	}
 	tmp = (*head);

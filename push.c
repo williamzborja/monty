@@ -13,23 +13,33 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 
 	if (!head)
 	{
-		perror_exit(line_number, 3, "push", head);
+		free_exit(3, line_number, "push");
 		return;
 	}
 
 	if (!token_num)
 	{
-		perror_exit(line_number, 6, "push", head);
+		free_exit(6, line_number, "push");
 		return;
 	}
 
-	num = atoi(token_num);
+
+	if (token_num[0] == '0')
+	{
+		num = 0;
+	}
+	else
+	{
+		num = atoi(token_num);
+		if (num == 0)
+			free_exit(6, line_number, "push");
+	}
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		/* error "Error: malloc failed"; */
-		perror_exit(line_number, 5, NULL, head);
+		free_exit(5, line_number, NULL);
 		return;
 	}
 

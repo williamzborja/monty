@@ -84,3 +84,24 @@ int only_space(char *string)
 	}
 	return (1);
 }
+/**
+ * validate_path - checks the correct format and access from a file
+ * @argc: num of parameters sended
+ * @argv: strings of parameters sended
+ * @file: file information
+ * Return: FILE data
+ **/
+FILE *validate_path(int argc, char *argv[], FILE *file)
+{
+	if (argc != 2)
+		free_exit(0, 0, NULL);
+	/* free_exit */
+
+	file = fopen(argv[1], "r");
+	if (file == NULL)
+	{
+		/*Error: Can't open file <file>*/
+		free_exit(1, 0, argv[1]);
+	}
+	return (file);
+}

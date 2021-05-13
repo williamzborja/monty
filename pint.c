@@ -13,7 +13,7 @@ void _pint(stack_t **head, unsigned int line_number)
 	tmp = (*head);
 	if (tmp == NULL)
 	{
-		perror_exit(line_number, 3, NULL, head);
+		free_exit(3, line_number, NULL);
 		return;
 	}
 	while (tmp->next == NULL)

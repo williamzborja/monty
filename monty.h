@@ -41,9 +41,24 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct free_s - handle variables for free
+ * @line_num: counter from the file readed
+ * @std_string: string for manage an especific error
+ * @head: head in the double linked list
+**/
+typedef struct free_s
+{
+	char *line_read;
+	FILE *file;
+	stack_t *head;
+} free_t;
+
 /* MAIN FUNCTIONS */
+
 /*print error msg in standard error*/
-void perror_exit(int, int, char *, stack_t **);
+void print_err(int err_code, int line_number, char *opcode);
+void free_exit(int, int, char *);
 /**
 * find_built - find if the built-in sended exists or not
 * @num_line: file line counter
@@ -51,17 +66,14 @@ void perror_exit(int, int, char *, stack_t **);
 * @line_number: file line counter
 * Return: always void
 **/
-void (*find_built(int num_line, char *opcode, stack_t **head))(stack_t **stack,
-							       unsigned int line_number);
-/**/
-FILE *validate_path(int argc, char *argv[], FILE *file);
-/**/
-int tokenize(char *, char **);
+void (*find_built(int num_line, char *opcode))(stack_t **stack,
+															   unsigned int line_number);
+
 /**/
 void execute(stack_t **, char *, size_t);
 /**/
 void free_stack(stack_t *head);
-int only_space(char *string);
+
 /* BUILT-IN FUNCTIONS */
 /*prints all the elements of a stack_t list*/
 void _pall(stack_t **, unsigned int);
@@ -74,8 +86,15 @@ void _swap(stack_t **head, unsigned int line_number);
 /*prints the value at the top of the stack, followed by a new line*/
 void _pint(stack_t **head, unsigned int line_number);
 
+/* TOOLS */
+/**/
+FILE *validate_path(int argc, char *argv[], FILE *file);
 /*validate if two strings are equals*/
 int _strcmp(char *str1, char *str2);
+/**/
+int tokenize(char *, char **);
+/**/
+int only_space(char *string);
 /*counts the number of elements in a linked stack_t list*/
 size_t len_list(const stack_t *head);
 #endif
