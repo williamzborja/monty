@@ -1,4 +1,15 @@
 #include "monty.h"
+
+#include <ctype.h>
+
+int digits_only(const char *s)
+{
+	while (*s)
+		if (isdigit(*s++) == 0)
+			return 0;
+	return 1;
+}
+
 /**
  * _push - adds a new node at the beginning of a dlistint_t list
 * @head: head in the dobly linked list
@@ -27,7 +38,7 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 	else
 	{
 		num = atoi(token_num);
-		if (num == 0)
+		if (num == 0 || !digits_only(token_num))
 			free_exit(6, line_number, "push");
 	}
 	new_node = malloc(sizeof(stack_t));
