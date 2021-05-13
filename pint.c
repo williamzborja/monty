@@ -9,7 +9,7 @@ void _pint(stack_t **head, unsigned int line_number)
 {
 	if ((*head) == NULL)
 	{
-		free_exit(3, line_number, NULL);
+		free_exit(3, line_number, "pint");
 		return;
 	}
 	printf("%d\n", (*head)->n);
