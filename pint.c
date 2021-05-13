@@ -7,19 +7,10 @@
 **/
 void _pint(stack_t **head, unsigned int line_number)
 {
-	stack_t *tmp;
-
-	(void) line_number;
-	tmp = (*head);
-	if (tmp == NULL)
+	if ((*head) == NULL)
 	{
 		free_exit(3, line_number, NULL);
 		return;
 	}
-	while (tmp->next == NULL)
-	{
-		/*here you will reach the final node*/
-		tmp = tmp->next;
-	}
-	printf("%d", tmp->n);
+	printf("%d\n", (*head)->n);
 }
