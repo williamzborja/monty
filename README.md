@@ -14,16 +14,43 @@ Monty 0.98 is a scripting language interpreter
 - What are the most common use cases of stacks and queues
 - What is the proper way to use global variables
 
+## Environment
+```
+
+ This project has been tested on `Ubuntu 14.06.6 LTS`
+ 
+```
+
 ## Files
 
 File|description
 --|--
-main.c | entrypoint
-monty.h| header
-pall.c | built-in printall nodes in the stack
-pop.c  | built-in pop remove node in top of stack
+main.c | Entrypoint
+monty.h| Header with all the libraries, prototypes and structs
+built_in.c | First part of built-in functions
+built_in_2.c  | Second part of built-in functions
+calculations.c | Third part of built-in funcitons (only calculations)
+execute.c | Function to prepare the parameters of built-in functions
+find_built.c | Function to find and select the built-in or discard wrong parameters
+free_stack.c | Function to free memory from mallocs
+print_error.c | Function to print an error message on std_error
+tools.c | Different tool functions for the main functions
 
+## ¿How to compile?
 
+- _Run that command on your console where the project is located._
+
+```
+
+gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o monty
+
+```
+## Usage
+```
+
+ ./monty file
+ 
+```
 # Errors
 - 0:  USAGE: monty file
 - 1: Error: Can't open <file>
@@ -34,7 +61,7 @@ pop.c  | built-in pop remove node in top of stack
 - 6: L<line_number>: usage: push integer
 
 
-# Autor
+# Authors
 :computer: :coffee: :computer:  :coffee:
-- [@aike-s](https://github.com/aike-s) :woman:
-- [@williamzborja](https://github.com/williamzborja) :smile:
+- [Salome Grisales Lopez](https://github.com/aike-s) :woman:
+- [William Rodriguez Borja](https://github.com/williamzborja) :smile:

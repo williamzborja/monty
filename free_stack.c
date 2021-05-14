@@ -9,11 +9,9 @@ void free_stack(stack_t *head)
 	/*edge case*/
 	if (!head)
 		return;
-
 	/* normal */
 	if (head->prev)
 		free(head->prev);
-
 	/* case base */
 	if (head->next == NULL)
 	{
