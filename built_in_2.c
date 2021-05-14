@@ -42,7 +42,7 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 	else
 	{
 		num = atoi(token_num);
-		if (num == 0 || !digits_only(token_num))
+		if (num == 0)
 			free_exit(6, line_number, "push");
 	}
 	new_node = malloc(sizeof(stack_t));
