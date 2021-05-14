@@ -18,10 +18,16 @@ Monty 0.98 is a scripting language interpreter
 
 File|description
 --|--
-main.c | entrypoint
-monty.h| header
-pall.c | built-in printall nodes in the stack
-pop.c  | built-in pop remove node in top of stack
+main.c | Entrypoint
+monty.h| Header with all the libraries, prototypes and structs
+built_in.c | First part of built-in functions
+built_in_2.c  | Second part of built-in functions
+calculations.c | Third part of built-in funcitons (only calculations)
+execute.c | Function to prepare the parameters of built-in functions
+find_built.c | Function to find and select the built-in or discard wrong parameters
+free_stack.c | Function to free memory from mallocs
+print_error.c | Function to print an error message on std_error
+tools.c | Different tool functions for the main functions
 
 
 # Errors
