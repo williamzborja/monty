@@ -27,7 +27,7 @@ void _push(stack_t **head, unsigned int line_number, char *token_num)
 	stack_t *new_node = NULL;
 	int num;
 
-	if (!head)
+	if (!head || !*head)
 	{
 		free_exit(3, line_number, "push");
 		return;
