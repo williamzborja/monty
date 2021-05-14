@@ -45,6 +45,12 @@ tools.c | Different tool functions for the main functions
 gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o monty
 
 ```
+## Usage
+```
+
+ ./monty file
+ 
+```
 # Errors
 - 0:  USAGE: monty file
 - 1: Error: Can't open <file>
