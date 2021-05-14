@@ -61,7 +61,7 @@ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o monty
 - 6: L<line_number>: usage: push integer
 
 
-# Autor
+# Authors
 :computer: :coffee: :computer:  :coffee:
-- [@aike-s](https://github.com/aike-s) :woman:
-- [@williamzborja](https://github.com/williamzborja) :smile:
+- [Salome Grisales Lopez](https://github.com/aike-s) :woman:
+- [William Rodriguez Borja](https://github.com/williamzborja) :smile:
