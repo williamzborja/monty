@@ -15,8 +15,12 @@ int main(int argc, char *argv[])
 	ssize_t char_read = 0;
 
 	free_data = malloc(sizeof(free_t));
-	if (!free_data)
+	if (free_data == NULL)
+	{
 		free_exit(5, 0, NULL);
+		return;
+	}
+		
 	/* validate path */
 
 	free_data->head = NULL;
