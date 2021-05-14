@@ -56,9 +56,7 @@ void _sub(stack_t **head, unsigned int line_num)
 	tmp = (*head);
 	/*here the values that are inside the first two nodes*/
 	/*are sub together in the second node*/
-
 	(*head)->next->n = ((*head)->n - ((*head)->next->n));
-
 	(*head) = (*head)->next;
 	/*at this point head now points to what used to be the second node*/
 	(*head)->prev = NULL;
