@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (free_data == NULL)
 	{
 		free_exit(5, 0, NULL);
-		return;
+		return (EXIT_FAILURE);
 	}
 		
 	/* validate path */
