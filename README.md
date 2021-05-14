@@ -14,6 +14,13 @@ Monty 0.98 is a scripting language interpreter
 - What are the most common use cases of stacks and queues
 - What is the proper way to use global variables
 
+## Environment
+```
+
+ This project has been tested on `Ubuntu 14.06.6 LTS`
+ 
+```
+
 ## Files
 
 File|description
@@ -29,7 +36,15 @@ free_stack.c | Function to free memory from mallocs
 print_error.c | Function to print an error message on std_error
 tools.c | Different tool functions for the main functions
 
+## ¿How to compile?
 
+- _Run that command on your console where the project is located._
+
+```
+
+gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o monty
+
+```
 # Errors
 - 0:  USAGE: monty file
 - 1: Error: Can't open <file>
