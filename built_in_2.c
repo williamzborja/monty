@@ -1,20 +1,5 @@
 #include "monty.h"
 
-#include <ctype.h>
-
-/**
- * digits_only - validate if string is only numbers
- * @s: string
- * Return: true or false
- */
-int digits_only(const char *s)
-{
-	while (*s)
-		if (isdigit(*s++) == 0)
-			return (0);
-	return (1);
-}
-
 /**
  * _push - adds a new node at the beginning of a dlistint_t list
 * @head: head in the dobly linked list

@@ -134,3 +134,41 @@ void _mul(stack_t **head, unsigned int line_num)
 	/*free the unnecessary node*/
 	free(tmp);
 }
+
+/**
+* _mod - divides the top two elements of the stack
+* @head: head in the dobly linked list
+* @line_num: file line counter
+* Return: always void
+**/
+void _mod(stack_t **head, unsigned int line_num)
+{
+	int num_elements = 0;
+	stack_t *tmp;
+
+	if (head == NULL)
+	{
+		free_exit(4, line_num, "mod");
+		return;
+	}
+	num_elements = len_list(*head);
+	if (num_elements < 2)
+	{
+		free_exit(4, line_num, "mod");
+		return;
+	}
+	tmp = (*head);
+	if ((*head)->n == '0')
+	{
+		free_exit(8, line_num, "mod");
+		return;
+	}
+	/*here the values that are inside the first two nodes*/
+	/*are module together in the second node*/
+	(*head)->next->n = (((*head)->n) % ((*head)->next->n));
+	(*head) = (*head)->next;
+	/*at this point head now points to what used to be the second node*/
+	(*head)->prev = NULL;
+	/*free the unnecessary node*/
+	free(tmp);
+}
