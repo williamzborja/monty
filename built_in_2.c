@@ -89,7 +89,7 @@ void _pstr(stack_t **head, unsigned int line_number)
 	(void)line_number;
 	if (head == NULL)
 		return;
-	
+
 	while (tmp != NULL)
 	{
 		if (tmp->n == 0)
@@ -101,14 +101,14 @@ void _pstr(stack_t **head, unsigned int line_number)
 		}
 		tmp = tmp->next;
 	}
- 	string[i] = '\0';
+	string[i] = '\0';
 	if (string != NULL)
 		printf("%s", string);
 	printf("\n");
 }
 
 /**
-* pchar - prints the char at the top of the stack
+* _pchar - prints the char at the top of the stack
 * @head: head in the dobly linked list
 * @line_number: file line counter
 * Return: always void
@@ -116,6 +116,7 @@ void _pstr(stack_t **head, unsigned int line_number)
 void _pchar(stack_t **head, unsigned int line_number)
 {
 	int c;
+
 	if (!head || *head == NULL)
 	{
 		free_exit(4, line_number, "pchar");
