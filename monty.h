@@ -95,7 +95,10 @@ void _sub(stack_t **head, unsigned int line_num);
 void _div(stack_t **head, unsigned int line_num);
 /*mul the first two elements in one of them**/
 void _mul(stack_t **head, unsigned int line_num);
-
+/*prints the char at the top of the stack*/
+void _pchar(stack_t **head, unsigned int line_number);
+/*prints the string starting at the top of the stack*/
+void _pstr(stack_t **head, unsigned int line_number);
 
 /* TOOLS */
 /**/

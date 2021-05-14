@@ -20,6 +20,8 @@ void (*find_built(int num_line, char *opcode))(stack_t **head,
 		{"sub", _sub},
 		{"div", _div},
 		{"mul", _mul},
+		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}};
 
 	for (i = 0; options[i].opcode != NULL; i++)

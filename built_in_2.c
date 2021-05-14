@@ -89,3 +89,57 @@ void _swap(stack_t **head, unsigned int line_number)
 	(*head)->n = (*head)->next->n;
 	(*head)->next->n = tmp_num;
 }
+/**
+* _pstr - prints the string starting at the top of the stack
+* @head: head in the dobly linked list
+* @line_number: file line counter
+* Return: always void
+**/
+void _pstr(stack_t **head, unsigned int line_number)
+{
+	char string[100];
+	size_t i = 0;
+	stack_t *tmp = (*head);
+
+	(void)line_number;
+	if (head == NULL)
+		return;
+	
+	while (tmp != NULL)
+	{
+		if (tmp->n == 0)
+			break;
+		if (tmp->n >= 32 && tmp->n <= 127)
+		{
+			string[i] = tmp->n;
+			i++;
+		}
+		tmp = tmp->next;
+	}
+ 	string[i] = '\0';
+	if (string != NULL)
+		printf("%s", string);
+	printf("\n");
+}
+
+/**
+* pchar - prints the char at the top of the stack
+* @head: head in the dobly linked list
+* @line_number: file line counter
+* Return: always void
+**/
+void _pchar(stack_t **head, unsigned int line_number)
+{
+	int c;
+	if (!head || *head == NULL)
+	{
+		free_exit(4, line_number, "pchar");
+		return;
+	}
+	c = (*head)->n;
+	if (c < 32 || c > 127)
+	{
+		free_exit(9, line_number, NULL);
+	}
+	printf("%c\n", c);
+}
